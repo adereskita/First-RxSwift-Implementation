@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+
+protocol CharacterDelegate {
+    func didSelectChar(_ name:String)
+}
 
 class DetailViewController: UIViewController {
+    
+    var delegate:CharacterDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +22,12 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func characterSet(_ sender: UIButton){
+        guard let characterName = sender.titleLabel?.text else { return }
+        
+        if let delegateObj = delegate {
+            delegateObj.didSelectChar(characterName)
+        }
     }
-    */
 
 }
