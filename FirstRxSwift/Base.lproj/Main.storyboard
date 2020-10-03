@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAf-A5-qlo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Character : Default" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gle-3o-stx">
-                                <rect key="frame" x="120" y="438" width="174" height="21"/>
+                                <rect key="frame" x="116" y="465" width="182.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,10 +27,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gle-3o-stx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="KnO-pc-vup"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gle-3o-stx" secondAttribute="bottom" constant="403" id="n0x-mG-6EX"/>
-                            <constraint firstItem="gle-3o-stx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="o0P-gs-Rbp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gle-3o-stx" secondAttribute="trailing" constant="120" id="ubS-1o-TGX"/>
+                            <constraint firstItem="gle-3o-stx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Zmp-Qt-SVb"/>
+                            <constraint firstItem="gle-3o-stx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tbX-m5-gFg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lPm-qJ-vTc">
@@ -39,6 +38,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameLbl" destination="gle-3o-stx" id="Drf-dA-2L8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

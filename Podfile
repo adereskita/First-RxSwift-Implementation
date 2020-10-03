@@ -6,6 +6,7 @@ target 'FirstRxSwift' do
   use_frameworks!
 
   pod 'RxSwift', '~> 5'
+  pod 'RxRelay'
   # Pods for FirstRxSwift
 
 end
